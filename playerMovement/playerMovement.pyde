@@ -13,6 +13,7 @@ def draw():
      background(100)         
      strokeWeight(10)
      strokeCap(SQUARE)
+     chest()
 
 def moveRight(rep):
     for i in range(0, rep * 5, 1):
@@ -39,9 +40,6 @@ def moveDown(rep):
         point(x, y + i)
     y = y + (5 * rep)
 
-def mouseClicked():
-    saveFrame("line-######.png")
-
 def keyPressed():
     if key == CODED:
         if keyCode == RIGHT:
@@ -52,3 +50,9 @@ def keyPressed():
             moveUp(1)
         elif keyCode == LEFT:
             moveLeft(1)
+def chest(x,y):
+    move = false
+    if move:
+    fill(255)
+    rect(random(1,500),random(1,500),10,10)
+    
